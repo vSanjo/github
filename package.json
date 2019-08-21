@@ -1,0 +1,8 @@
+{
+  "name": "github",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:vSanjo/github.git",
+  "author": "vSanjo <hello@davidwoodward.me>",
+  "license": "MIT"
+}
