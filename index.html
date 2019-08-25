@@ -1,13 +1,131 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>vSanjo's Github Projects'</title>
-</head>
-<body>
-  <h1>Currently populating.</h1>
-  <h2>Stay tuned.</h2>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>vSanjo's Github Projects</title>
+    <link
+      href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+    <script src="https://unpkg.com/vue@2.6.10/dist/vue.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+
+  </head>
+
+  <body>
+    <div id="app">
+      <div class="flex flex-wrap justify-center my-6">
+        <h1 class="w-full text-center text-4xl">vSanjo's Github Projects</h1>
+        <h2 class="w-full text-center text-2xl">
+          What projects are currently being developed?
+        </h2>
+      </div>
+      <div class="flex flex-wrap justify-center">
+        <!-- Project Card -->
+        <div
+          data-name="Project Card"
+          class="flex border flex-wrap max-w-xs m-3 rounded"
+          v-for="project in projects"
+        >
+          <div style="min-height: 320px;">
+            <div
+              class="flex flex-auto w-full py-2 px-4 border-b text-gray-800 justify-between items-center self-start"
+            >
+              <h3 class="font-semibold">{{project.name}}</h3>
+              <a v-bind:href="project.url" target="_blank" class="mr-2">
+                <i
+                  class="fas fa-code-branch text-gray-700"></i>
+                </a>
+            </div>
+            <div
+              class="flex flex-auto w-full py-2 px-4 border-b text-gray-800 justify-between items-center self-start"
+            >
+              Status: <span
+                class="mr-2"
+                v-bind:class="{
+                  'text-gray-500':  project.status == 4,
+                  'text-purple-500': project.status == 3,
+                  'text-green-500': project.status == 2,
+                  'text-orange-500': project.status == 1,
+                  'text-red-500': project.status == 0,
+                }">
+                  {{convertStatus(project.status)}}
+                </span>
+            </div>
+            <div
+              class="flex flex-auto w-full py-2 px-4 border-b text-gray-800 justify-between items-center self-start"
+            >
+              Added: <span class="mr-2 text-green-500">{{ momentConvert(project.dateAdded.$date) }}</span>
+            </div>
+             <div
+              class="flex flex-auto w-full py-2 px-4 border-b text-gray-800 justify-between items-center self-start"
+            >
+              Updated: <span class="mr-2 text-green-500">{{ momentConvert(project.dateModified.$date) }}</span>
+            </div>
+             <div
+              class="flex flex-auto w-full py-2 px-4 border-b text-gray-800 justify-between items-center self-start"
+            >
+              Finished: <span class="mr-2 text-green-500">{{ momentConvert(project.dateFinished.$date) }}</span>
+            </div>
+            <div class="flex flex-auto w-full p-4">
+              <p class="text-gray-700">{{project.description}}</p>
+            </div>
+          </div>
+        </div>
+        <!-- End Project Card-->
+
+        <div class="flex flex-wrap border py-2 px-4 rounded">
+          <h3 class="w-full border-b pb-2 mb-2 font-semibold">Upcoming</h3>
+          <ul>
+            <li class="list-disc ml-5">Learnings graph</li>
+            <li class="list-disc ml-5">Dynamic 'updated' dates</li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+    <script src="https://kit.fontawesome.com/a15aa7eef2.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        data() {
+          return {
+            projects: {}
+          };
+        },
+        methods: {
+          momentConvert(date) {
+            // A bit hacky, but it's an MVP so.
+            if (moment(date).diff(Date.now(), 'days') < -365){
+              return "Unfinished";
+            } else {
+              return moment(date).format("DD-MM-YY");
+            }
+          },
+          convertStatus(status) {
+            switch (status){
+              case 0:
+                return "Starting";
+              case 1:
+                return "In-Progress";
+              case 2:
+                return "Finished";
+              case 3:
+                return "Abandoned";
+              default:
+                return "Unsure..";
+            }
+          }
+        },
+        mounted() {
+          axios.get("./projects.json").then(data => {
+            this.projects = data.data;
+          });
+        }
+      });
+    </script>
+  </body>
 </html>

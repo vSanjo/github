@@ -1,0 +1,42 @@
+[
+  {
+    "_id": { "$oid": "5d60a61aeb2bf867ca323a9a" },
+    "dateAdded": { "$date": "2019-08-24T03:08:12.000Z" },
+    "dateFinished": { "$date": "1999-12-31T16:00:00.000Z" },
+    "dateModified": { "$date": "2019-08-24T03:09:12.000Z" },
+    "description": "This project is an easy-to-use but detailed Dungeons \u0026 Dragons information database. It exists to take the teachings of other projects and combine it with running an online PaaS. It's evolving and changing often but will hopefully stabilize soon.",
+    "name": "Tavern Tales",
+    "status": 0,
+    "url": "https://github.com/vSanjo/tavern-tales"
+  },
+  {
+    "_id": { "$oid": "5d60a59eeb2bf867ca323a98" },
+    "dateAdded": { "$date": "2019-08-24T03:08:12.000Z" },
+    "dateFinished": { "$date": "1999-12-31T16:00:00.000Z" },
+    "dateModified": { "$date": "2019-08-24T03:09:12.000Z" },
+    "description": "This project is a dashboard consuming the data Actor Server serves. I'm doing it to learn more/better Vue principles and put into practice some teachings I find working through others' work.",
+    "name": "Actor Dashboard",
+    "status": 1,
+    "url": "https://github.com/vSanjo/actor-dashboard"
+  },
+  {
+    "_id": { "$oid": "5d60a5f0eb2bf867ca323a99" },
+    "dateAdded": { "$date": "2019-08-24T03:08:12.000Z" },
+    "dateFinished": { "$date": "1999-12-31T16:00:00.000Z" },
+    "dateModified": { "$date": "2019-08-24T03:09:12.000Z" },
+    "description": "This project is attempting to be a live, constantly evolving system meant to run on a server and emulate an MMO or similar fantasy landscape. That includes creating characters, their roles and effects on the world around them. It's primary role is to teach myself more/better Javascript principles as I learn them.",
+    "name": "Actor Server",
+    "status": 1,
+    "url": "https://github.com/vSanjo/Actor-Server"
+  },
+  {
+    "_id": { "$oid": "5d60a644eb2bf867ca323a9b" },
+    "dateAdded": { "$date": "2019-08-24T03:08:12.000Z" },
+    "dateFinished": { "$date": "1999-12-31T16:00:00.000Z" },
+    "dateModified": { "$date": "2019-08-24T03:09:12.000Z" },
+    "description": "This project. Literally. Somewhere to store and hold myself accountable of the projects that I hold important. Essentially keeps me guided and avoid side-project-creep.",
+    "name": "Github Project List",
+    "status": 1,
+    "url": "https://github.com/vSanjo/github"
+  }
+]
