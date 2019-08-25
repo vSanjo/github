@@ -12,7 +12,6 @@
     <script src="https://unpkg.com/vue@2.6.10/dist/vue.js"></script>
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
-
   </head>
 
   <body>
@@ -34,57 +33,72 @@
             <div
               class="flex flex-auto w-full py-2 px-4 border-b text-gray-800 justify-between items-center self-start"
             >
-              <h3 class="font-semibold">{{project.name}}</h3>
-              <a v-bind:href="project.url" target="_blank" class="mr-2">
-                <i
-                  class="fas fa-code-branch text-gray-700"></i>
-                </a>
+              <h3 class="font-semibold">{{ project.name }}</h3>
+              <a
+                v-if="project.url.length > 0"
+                v-bind:href="project.url"
+                target="_blank"
+                class="mr-2"
+              >
+                <i class="fas fa-code-branch text-gray-700"></i>
+              </a>
             </div>
             <div
               class="flex flex-auto w-full py-2 px-4 border-b text-gray-800 justify-between items-center self-start"
             >
-              Status: <span
+              Status:
+              <span
                 class="mr-2"
                 v-bind:class="{
-                  'text-gray-500':  project.status == 4,
+                  'text-blue-500':  project.status == 4,
                   'text-purple-500': project.status == 3,
                   'text-green-500': project.status == 2,
                   'text-orange-500': project.status == 1,
                   'text-red-500': project.status == 0,
-                }">
-                  {{convertStatus(project.status)}}
-                </span>
+                }"
+              >
+                {{ convertStatus(project.status) }}
+              </span>
             </div>
             <div
               class="flex flex-auto w-full py-2 px-4 border-b text-gray-800 justify-between items-center self-start"
             >
-              Added: <span class="mr-2 text-green-500">{{ momentConvert(project.dateAdded.$date) }}</span>
+              Added:
+              <span class="mr-2 text-green-500">{{
+                momentConvert(project.dateAdded.$date)
+              }}</span>
             </div>
-             <div
+            <div
               class="flex flex-auto w-full py-2 px-4 border-b text-gray-800 justify-between items-center self-start"
             >
-              Updated: <span class="mr-2 text-green-500">{{ momentConvert(project.dateModified.$date) }}</span>
+              Updated:
+              <span class="mr-2 text-green-500">{{
+                momentConvert(project.dateModified.$date)
+              }}</span>
             </div>
-             <div
+            <div
               class="flex flex-auto w-full py-2 px-4 border-b text-gray-800 justify-between items-center self-start"
             >
-              Finished: <span class="mr-2 text-green-500">{{ momentConvert(project.dateFinished.$date) }}</span>
+              Finished:
+              <span class="mr-2 text-green-500">{{
+                momentConvert(project.dateFinished.$date)
+              }}</span>
             </div>
             <div class="flex flex-auto w-full p-4">
-              <p class="text-gray-700">{{project.description}}</p>
+              <p class="text-gray-700">{{ project.description }}</p>
             </div>
           </div>
         </div>
         <!-- End Project Card-->
-
-        <div class="flex flex-wrap border py-2 px-4 rounded">
+      </div>
+      <div class="flex justify-center mb-6">
+        <div class="flex flex-wrap border py-2 px-4 rounded max-w-xs">
           <h3 class="w-full border-b pb-2 mb-2 font-semibold">Upcoming</h3>
           <ul>
             <li class="list-disc ml-5">Learnings graph</li>
             <li class="list-disc ml-5">Dynamic 'updated' dates</li>
           </ul>
         </div>
-
       </div>
     </div>
     <script src="https://kit.fontawesome.com/a15aa7eef2.js"></script>
@@ -99,23 +113,31 @@
         methods: {
           momentConvert(date) {
             // A bit hacky, but it's an MVP so.
-            if (moment(date).diff(Date.now(), 'days') < -365){
+            if (moment(date).diff(Date.now(), "days") < -365) {
               return "Unfinished";
             } else {
-              return moment(date).format("DD-MM-YY");
+              return moment(date).format("DD-MM-YY, hh:mm");
             }
           },
           convertStatus(status) {
-            switch (status){
+            switch (status) {
               case 0:
+                // Red
                 return "Starting";
               case 1:
+                // Orange
                 return "In-Progress";
               case 2:
+                // Green
                 return "Finished";
               case 3:
+                // Purple
                 return "Abandoned";
+              case 4:
+                // Blue
+                return "Learning";
               default:
+                // Black
                 return "Unsure..";
             }
           }
