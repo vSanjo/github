@@ -1,16 +1,14 @@
 [
   {
-    "_id": { "$oid": "5d60a61aeb2bf867ca323a9a" },
-    "dateAdded": { "$date": "2019-08-24T00:00:00.000Z" },
+    "dateAdded": { "$date": "2019-08-25T00:00:00.000Z" },
     "dateFinished": { "$date": "1999-12-31T01:00:00.000Z" },
-    "dateModified": { "$date": "2019-08-24T00:00:00.000Z" },
+    "dateModified": { "$date": "2019-08-25T00:00:00.000Z" },
     "description": "This project is a simple text-based game to learn game-development, iOS and Unity.",
     "name": "Petrichor",
     "status": 4,
     "url": ""
   },
   {
-    "_id": { "$oid": "5d60a61aeb2bf867ca323a9a" },
     "dateAdded": { "$date": "2019-08-24T00:00:00.000Z" },
     "dateFinished": { "$date": "1999-12-31T01:00:00.000Z" },
     "dateModified": { "$date": "2019-08-24T00:00:00.000Z" },
@@ -20,7 +18,15 @@
     "url": "https://github.com/vSanjo/tavern-tales"
   },
   {
-    "_id": { "$oid": "5d60a59eeb2bf867ca323a98" },
+    "dateAdded": { "$date": "2019-08-26T00:00:00.000Z" },
+    "dateFinished": { "$date": "1999-12-31T01:00:00.000Z" },
+    "dateModified": { "$date": "2019-08-26T00:00:00.000Z" },
+    "description": "This project is a character management platform for Dungeons \u0026 Dragons based TRPGs. It exists to learn things like data management on AWS, permissions and authentication and data-extrapolation from filetypes.",
+    "name": "Hero Tavern",
+    "status": 0,
+    "url": "https://github.com/vSanjo/hero-tavern"
+  },
+  {
     "dateAdded": { "$date": "2019-08-24T00:00:00.000Z" },
     "dateFinished": { "$date": "1999-12-31T01:00:00.000Z" },
     "dateModified": { "$date": "2019-08-24T00:00:00.000Z" },
@@ -30,7 +36,6 @@
     "url": "https://github.com/vSanjo/actor-dashboard"
   },
   {
-    "_id": { "$oid": "5d60a5f0eb2bf867ca323a99" },
     "dateAdded": { "$date": "2019-08-24T00:00:00.000Z" },
     "dateFinished": { "$date": "1999-12-31T01:00:00.000Z" },
     "dateModified": { "$date": "2019-08-24T00:00:00.000Z" },
@@ -40,7 +45,6 @@
     "url": "https://github.com/vSanjo/Actor-Server"
   },
   {
-    "_id": { "$oid": "5d60a644eb2bf867ca323a9b" },
     "dateAdded": { "$date": "2019-08-24T00:00:00.000Z" },
     "dateFinished": { "$date": "1999-12-31T01:00:00.000Z" },
     "dateModified": { "$date": "2019-08-24T00:00:00.000Z" },
