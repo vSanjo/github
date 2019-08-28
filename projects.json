@@ -9,6 +9,15 @@
     "url": "https://github.com/vSanjo/petrichor"
   },
   {
+    "dateAdded": { "$date": "2019-08-28T00:00:00.000Z" },
+    "dateFinished": { "$date": "1999-12-31T01:00:00.000Z" },
+    "dateModified": { "$date": "2019-08-28T00:00:00.000Z" },
+    "description": "This project is a test in social media marketing and creating a viral, useful web application for those that (may) need it most.",
+    "name": "Commish",
+    "status": 0,
+    "url": "https://github.com/vSanjo/commish"
+  },
+  {
     "dateAdded": { "$date": "2019-08-24T00:00:00.000Z" },
     "dateFinished": { "$date": "1999-12-31T01:00:00.000Z" },
     "dateModified": { "$date": "2019-08-24T00:00:00.000Z" },
