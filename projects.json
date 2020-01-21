@@ -1,14 +1,5 @@
 [
   {
-    "dateAdded": { "$date": "2019-08-25T00:00:00.000Z" },
-    "dateFinished": { "$date": "1999-12-31T01:00:00.000Z" },
-    "dateModified": { "$date": "2019-08-25T00:00:00.000Z" },
-    "description": "This project is a simple text-based game to learn game-development, iOS and Unity.",
-    "name": "Petrichor",
-    "status": 4,
-    "url": "https://github.com/vSanjo/petrichor"
-  },
-  {
     "dateAdded": { "$date": "2019-08-28T00:00:00.000Z" },
     "dateFinished": { "$date": "1999-12-31T01:00:00.000Z" },
     "dateModified": { "$date": "2019-08-28T00:00:00.000Z" },
@@ -26,14 +17,24 @@
     "status": 0,
     "url": "https://github.com/vSanjo/tavern-tales"
   },
+
   {
-    "dateAdded": { "$date": "2019-08-26T00:00:00.000Z" },
+    "dateAdded": { "$date": "2020-01-21T00:00:00.000Z" },
     "dateFinished": { "$date": "1999-12-31T01:00:00.000Z" },
-    "dateModified": { "$date": "2019-08-26T00:00:00.000Z" },
-    "description": "This project is a character management platform for Dungeons \u0026 Dragons based TRPGs. It exists to learn things like data management on AWS, permissions and authentication and data-extrapolation from filetypes.",
-    "name": "Hero Tavern",
+    "dateModified": { "$date": "2020-01-21T00:00:00.000Z" },
+    "description": "This project is a community-driven dice-sharing platform for people to communicate, trade and post images of their dice. It exists to take the teachings of other projects and combine it with running an online PaaS.",
+    "name": "Dice Fiends",
     "status": 0,
-    "url": "https://github.com/vSanjo/hero-tavern"
+    "url": "https://github.com/vSanjo/dice-fiends"
+  },
+  {
+    "dateAdded": { "$date": "2020-01-21T00:00:00.000Z" },
+    "dateFinished": { "$date": "1999-12-31T01:00:00.000Z" },
+    "dateModified": { "$date": "2020-01-21T00:00:00.000Z" },
+    "description": "This project is a product for a car-detailing business. It exists to put into production-practice the tools and systems learnt elsewhere.",
+    "name": "AFW Car Care",
+    "status": 0,
+    "url": ""
   },
   {
     "dateAdded": { "$date": "2019-08-24T00:00:00.000Z" },
@@ -51,7 +52,7 @@
     "description": "This project is attempting to be a live, constantly evolving system meant to run on a server and emulate an MMO or similar fantasy landscape. That includes creating characters, their roles and effects on the world around them. It's primary role is to teach myself more/better Javascript principles as I learn them.",
     "name": "Actor Server",
     "status": 1,
-    "url": "https://github.com/vSanjo/Actor-Server"
+    "url": "https://github.com/vSanjo/actor-server"
   },
   {
     "dateAdded": { "$date": "2019-08-24T00:00:00.000Z" },
@@ -61,5 +62,24 @@
     "name": "Github Project List",
     "status": 1,
     "url": "https://github.com/vSanjo/github"
+  },
+
+  {
+    "dateAdded": { "$date": "2019-08-26T00:00:00.000Z" },
+    "dateFinished": { "$date": "1999-12-31T01:00:00.000Z" },
+    "dateModified": { "$date": "2019-08-26T00:00:00.000Z" },
+    "description": "This project is a character management platform for Dungeons \u0026 Dragons based TRPGs. It exists to learn things like data management on AWS, permissions and authentication and data-extrapolation from filetypes.",
+    "name": "Hero Tavern",
+    "status": 3,
+    "url": "https://github.com/vSanjo/hero-tavern"
+  },
+  {
+    "dateAdded": { "$date": "2019-08-25T00:00:00.000Z" },
+    "dateFinished": { "$date": "1999-12-31T01:00:00.000Z" },
+    "dateModified": { "$date": "2019-08-25T00:00:00.000Z" },
+    "description": "This project is a simple text-based game to learn game-development, iOS and Unity.",
+    "name": "Petrichor",
+    "status": 4,
+    "url": "https://github.com/vSanjo/petrichor"
   }
 ]
