@@ -49,15 +49,43 @@
 
   <body>
     <div id="app">
+
       <div class="flex flex-wrap justify-center my-6">
         <h1 class="w-full text-center text-4xl">vSanjo's Github Projects</h1>
         <h2 class="w-full text-center text-2xl">
           What projects are currently being developed?
         </h2>
         <span class="mt-6"
-          >Updated: <span class="font-semibold">21-01-20</span></span
+          >Updated: <span class="font-semibold">31-05-20</span></span
         >
       </div>
+
+      <div class="flex justify-center mb-6">
+        <div class="flex flex-wrap border py-2 px-4 rounded max-w-lg">
+          <h3
+            class="w-full border-b pb-2 mb-2 font-semibold"
+            title="Technology I'd like to incorporate at some point"
+          >
+            Technology Table
+          </h3>
+          <ul>
+            <li class="list-disc ml-5">
+              Utilise more interesting or fun APIs,
+            </li>
+            <li class="list-disc ml-5">
+              Automate Facebook Ads and gather learnings from it,
+            </li>
+            <li class="list-disc ml-5">Machine learning for simple things,</li>
+            <li class="list-disc ml-5">
+              More advanced frameworks (React, etc),
+            </li>
+            <li class="list-disc ml-5">Vue's ecosystem (VueX, etc),</li>
+            <li class="list-disc ml-5">Godot,</li>
+            <li class="list-disc ml-5">Arduino and IoT.</li>
+          </ul>
+        </div>
+      </div>
+
       <div class="flex flex-wrap justify-center">
         <!-- Project Card -->
         <div
@@ -71,7 +99,11 @@
             >
               <h3 class="font-semibold">{{ project.name }}</h3>
               <span>
-                <i v-if="project.payable" v-bind:title="project.payableFrequency + ' | ' + project.payableAmount" class="fas fa-dollar-sign"></i>
+                <i
+                  v-if="project.payable"
+                  v-bind:title="project.payableFrequency + ' | ' + project.payableAmount"
+                  class="fas fa-dollar-sign"
+                ></i>
                 <a
                   v-if="project.url.length > 0"
                   v-bind:href="project.url"
@@ -130,15 +162,6 @@
         </div>
         <!-- End Project Card-->
       </div>
-      <div class="flex justify-center mb-6">
-        <div class="flex flex-wrap border py-2 px-4 rounded max-w-xs">
-          <h3 class="w-full border-b pb-2 mb-2 font-semibold">Upcoming</h3>
-          <ul>
-            <li class="list-disc ml-5">Learnings graph</li>
-            <li class="list-disc ml-5">Dynamic 'updated' dates</li>
-          </ul>
-        </div>
-      </div>
     </div>
     <script src="https://kit.fontawesome.com/a15aa7eef2.js"></script>
     <script>
@@ -182,7 +205,7 @@
           },
         },
         mounted() {
-          axios.get("./projects.json").then(data => {
+          axios.get("./projects.json").then((data) => {
             this.projects = data.data;
             return true;
           });

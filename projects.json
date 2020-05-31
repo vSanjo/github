@@ -1,5 +1,29 @@
 [
   {
+    "dateAdded": { "$date": "2019-08-24T00:00:00.000Z" },
+    "dateFinished": { "$date": "1999-12-31T01:00:00.000Z" },
+    "dateModified": { "$date": "2019-08-24T00:00:00.000Z" },
+    "description": "This project is a dashboard consuming the data Actor Server serves. I'm doing it to learn more/better Vue principles and put into practice some teachings I find working through others' work.",
+    "name": "Actor Dashboard",
+    "status": 0,
+    "payable": false,
+    "payableFrequency": "N/A",
+    "payableAmount": 0,
+    "url": "https://github.com/vSanjo/actor-dashboard"
+  },
+  {
+    "dateAdded": { "$date": "2019-08-24T00:00:00.000Z" },
+    "dateFinished": { "$date": "1999-12-31T01:00:00.000Z" },
+    "dateModified": { "$date": "2019-08-24T00:00:00.000Z" },
+    "description": "This project is attempting to be a live, constantly evolving system meant to run on a server and emulate an MMO or similar fantasy landscape. That includes creating characters, their roles and effects on the world around them. It's primary role is to teach myself more/better Javascript principles as I learn them.",
+    "name": "Actor Server",
+    "status": 0,
+    "payable": false,
+    "payableFrequency": "N/A",
+    "payableAmount": 0,
+    "url": "https://github.com/vSanjo/actor-server"
+  },
+  {
     "dateAdded": { "$date": "2019-08-28T00:00:00.000Z" },
     "dateFinished": { "$date": "1999-12-31T01:00:00.000Z" },
     "dateModified": { "$date": "2019-08-28T00:00:00.000Z" },
@@ -11,19 +35,6 @@
     "payableAmount": "USD$5 - USD$40",
     "url": "https://github.com/vSanjo/commish"
   },
-  {
-    "dateAdded": { "$date": "2019-08-24T00:00:00.000Z" },
-    "dateFinished": { "$date": "1999-12-31T01:00:00.000Z" },
-    "dateModified": { "$date": "2019-08-24T00:00:00.000Z" },
-    "description": "This project is an easy-to-use but detailed Dungeons \u0026 Dragons information database. It exists to take the teachings of other projects and combine it with running an online PaaS. It's evolving and changing often but will hopefully stabilize soon.",
-    "name": "Tavern Tales",
-    "status": 0,
-    "payable": true,
-    "payableFrequency": "Subscription",
-    "payableAmount": "USD$5",
-    "url": "https://github.com/vSanjo/tavern-tales"
-  },
-
   {
     "dateAdded": { "$date": "2020-01-21T00:00:00.000Z" },
     "dateFinished": { "$date": "1999-12-31T01:00:00.000Z" },
@@ -37,40 +48,40 @@
     "url": "https://github.com/vSanjo/dice-fiends"
   },
   {
+    "dateAdded": { "$date": "2019-08-26T00:00:00.000Z" },
+    "dateFinished": { "$date": "1999-12-31T01:00:00.000Z" },
+    "dateModified": { "$date": "2019-08-26T00:00:00.000Z" },
+    "description": "This project is a character management platform for Dungeons \u0026 Dragons based TRPGs. It exists to learn things like data management on AWS, permissions and authentication and data-extrapolation from filetypes.",
+    "name": "Hero Tavern",
+    "status": 0,
+    "payable": true,
+    "payableFrequency": "Tiered Subscription",
+    "payableAmount": "USD$5 - USD$15",
+    "url": "https://github.com/vSanjo/hero-tavern"
+  },
+  {
+    "dateAdded": { "$date": "2019-08-24T00:00:00.000Z" },
+    "dateFinished": { "$date": "1999-12-31T01:00:00.000Z" },
+    "dateModified": { "$date": "2019-08-24T00:00:00.000Z" },
+    "description": "This project is an easy-to-use but detailed Dungeons \u0026 Dragons information database. It exists to take the teachings of other projects and combine it with running an online PaaS. It's evolving and changing often but will hopefully stabilize soon.",
+    "name": "Tavern Tales",
+    "status": 0,
+    "payable": true,
+    "payableFrequency": "Subscription",
+    "payableAmount": "USD$5",
+    "url": "https://github.com/vSanjo/tavern-tales"
+  },
+  {
     "dateAdded": { "$date": "2020-01-21T00:00:00.000Z" },
     "dateFinished": { "$date": "1999-12-31T01:00:00.000Z" },
     "dateModified": { "$date": "2020-01-21T00:00:00.000Z" },
     "description": "This project is a product for a car-detailing business. It exists to put into production-practice the tools and systems learnt elsewhere.",
     "name": "AFW Car Care",
-    "status": 0,
+    "status": 1,
     "payable": true,
     "payableFrequency": "One-Off",
     "payableAmount": "$750",
     "url": ""
-  },
-  {
-    "dateAdded": { "$date": "2019-08-24T00:00:00.000Z" },
-    "dateFinished": { "$date": "1999-12-31T01:00:00.000Z" },
-    "dateModified": { "$date": "2019-08-24T00:00:00.000Z" },
-    "description": "This project is a dashboard consuming the data Actor Server serves. I'm doing it to learn more/better Vue principles and put into practice some teachings I find working through others' work.",
-    "name": "Actor Dashboard",
-    "status": 1,
-    "payable": false,
-    "payableFrequency": "N/A",
-    "payableAmount": 0,
-    "url": "https://github.com/vSanjo/actor-dashboard"
-  },
-  {
-    "dateAdded": { "$date": "2019-08-24T00:00:00.000Z" },
-    "dateFinished": { "$date": "1999-12-31T01:00:00.000Z" },
-    "dateModified": { "$date": "2019-08-24T00:00:00.000Z" },
-    "description": "This project is attempting to be a live, constantly evolving system meant to run on a server and emulate an MMO or similar fantasy landscape. That includes creating characters, their roles and effects on the world around them. It's primary role is to teach myself more/better Javascript principles as I learn them.",
-    "name": "Actor Server",
-    "status": 1,
-    "payable": false,
-    "payableFrequency": "N/A",
-    "payableAmount": 0,
-    "url": "https://github.com/vSanjo/actor-server"
   },
   {
     "dateAdded": { "$date": "2019-08-24T00:00:00.000Z" },
@@ -84,24 +95,11 @@
     "payableAmount": 0,
     "url": "https://github.com/vSanjo/github"
   },
-
-  {
-    "dateAdded": { "$date": "2019-08-26T00:00:00.000Z" },
-    "dateFinished": { "$date": "1999-12-31T01:00:00.000Z" },
-    "dateModified": { "$date": "2019-08-26T00:00:00.000Z" },
-    "description": "This project is a character management platform for Dungeons \u0026 Dragons based TRPGs. It exists to learn things like data management on AWS, permissions and authentication and data-extrapolation from filetypes.",
-    "name": "Hero Tavern",
-    "status": 3,
-    "payable": true,
-    "payableFrequency": "Tiered Subscription",
-    "payableAmount": "USD$5 - USD$15",
-    "url": "https://github.com/vSanjo/hero-tavern"
-  },
   {
     "dateAdded": { "$date": "2019-08-25T00:00:00.000Z" },
     "dateFinished": { "$date": "1999-12-31T01:00:00.000Z" },
     "dateModified": { "$date": "2019-08-25T00:00:00.000Z" },
-    "description": "This project is a simple text-based game to learn game-development, iOS and Unity.",
+    "description": "This project is a simple text-based game to learn game-development, iOS, Unity and Godot.",
     "name": "Petrichor",
     "status": 4,
     "payable": true,
