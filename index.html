@@ -4,9 +4,23 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <link rel="apple-touch-icon" sizes="180x180" href="./apple-touch-icon.png" />
-    <link rel="icon" type="image/png" sizes="32x32" href="./favicon-32x32.png" />
-    <link rel="icon" type="image/png" sizes="16x16" href="./favicon-16x16.png" />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="./apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="./favicon-16x16.png"
+    />
     <link rel="manifest" href="./site.webmanifest" />
     <title>vSanjo's Github Projects</title>
     <link
@@ -40,7 +54,9 @@
         <h2 class="w-full text-center text-2xl">
           What projects are currently being developed?
         </h2>
-        <span class="mt-6">Updated: <span class="font-semibold">21-01-20</span></span>
+        <span class="mt-6"
+          >Updated: <span class="font-semibold">21-01-20</span></span
+        >
       </div>
       <div class="flex flex-wrap justify-center">
         <!-- Project Card -->
@@ -54,14 +70,17 @@
               class="flex flex-auto w-full py-2 px-4 border-b text-gray-800 justify-between items-center self-start"
             >
               <h3 class="font-semibold">{{ project.name }}</h3>
-              <a
-                v-if="project.url.length > 0"
-                v-bind:href="project.url"
-                target="_blank"
-                class="mr-2"
-              >
-                <i class="fas fa-code-branch text-gray-700"></i>
-              </a>
+              <span>
+                <i v-if="project.payable" v-bind:title="project.payableFrequency + ' | ' + project.payableAmount" class="fas fa-dollar-sign"></i>
+                <a
+                  v-if="project.url.length > 0"
+                  v-bind:href="project.url"
+                  target="_blank"
+                  class="mr-2"
+                >
+                  <i class="fas fa-code-branch text-gray-700"></i>
+                </a>
+              </span>
             </div>
             <div
               class="flex flex-auto w-full py-2 px-4 border-b text-gray-800 justify-between items-center self-start"
@@ -84,25 +103,25 @@
               class="flex flex-auto w-full py-2 px-4 border-b text-gray-800 justify-between items-center self-start"
             >
               Added:
-              <span class="mr-2">{{
-                momentConvert(project.dateAdded.$date)
-              }}</span>
+              <span class="mr-2"
+                >{{ momentConvert(project.dateAdded.$date) }}</span
+              >
             </div>
             <div
               class="flex flex-auto w-full py-2 px-4 border-b text-gray-800 justify-between items-center self-start"
             >
               Updated:
-              <span class="mr-2">{{
-                momentConvert(project.dateModified.$date)
-              }}</span>
+              <span class="mr-2"
+                >{{ momentConvert(project.dateModified.$date) }}</span
+              >
             </div>
             <div
               class="flex flex-auto w-full py-2 px-4 border-b text-gray-800 justify-between items-center self-start"
             >
               Finished:
-              <span class="mr-2">{{
-                momentConvert(project.dateFinished.$date)
-              }}</span>
+              <span class="mr-2"
+                >{{ momentConvert(project.dateFinished.$date) }}</span
+              >
             </div>
             <div class="flex flex-auto w-full p-4">
               <p class="text-gray-700">{{ project.description }}</p>
@@ -127,7 +146,7 @@
         el: "#app",
         data() {
           return {
-            projects: {}
+            projects: {},
           };
         },
         methods: {
@@ -160,13 +179,14 @@
                 // Black
                 return "Unsure..";
             }
-          }
+          },
         },
         mounted() {
           axios.get("./projects.json").then(data => {
             this.projects = data.data;
+            return true;
           });
-        }
+        },
       });
     </script>
   </body>
