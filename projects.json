@@ -60,6 +60,18 @@
     "url": "https://github.com/vSanjo/hero-tavern"
   },
   {
+    "dateAdded": { "$date": "2020-06-21T00:00:00.000Z" },
+    "dateFinished": { "$date": "1999-12-31T01:00:00.000Z" },
+    "dateModified": { "$date": "2020-06-21T00:00:00.000Z" },
+    "description": "This project is a personal development application based on the popular 'skill tree' trope, using simple logic to allow users to create a 'skill tree' for themselves to learn and improve with.",
+    "name": "Hero Tavern",
+    "status": 0,
+    "payable": true,
+    "payableFrequency": "Tiered Subscription",
+    "payableAmount": "USD$5 - USD$15",
+    "url": "https://github.com/vSanjo/hero-tavern"
+  },
+  {
     "dateAdded": { "$date": "2019-08-24T00:00:00.000Z" },
     "dateFinished": { "$date": "1999-12-31T01:00:00.000Z" },
     "dateModified": { "$date": "2019-08-24T00:00:00.000Z" },
