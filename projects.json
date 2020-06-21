@@ -64,7 +64,7 @@
     "dateFinished": { "$date": "1999-12-31T01:00:00.000Z" },
     "dateModified": { "$date": "2020-06-21T00:00:00.000Z" },
     "description": "This project is a personal development application based on the popular 'skill tree' trope, using simple logic to allow users to create a 'skill tree' for themselves to learn and improve with.",
-    "name": "Hero Tavern",
+    "name": "Perski",
     "status": 0,
     "payable": true,
     "payableFrequency": "Tiered Subscription",
