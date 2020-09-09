@@ -24,12 +24,12 @@
     <link rel="manifest" href="./site.webmanifest" />
     <title>vSanjo's Github Projects</title>
     <link
-      href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css"
+      href="https://unpkg.com/tailwindcss@1.1.2/dist/tailwind.min.css"
       rel="stylesheet"
     />
     <script src="https://unpkg.com/vue@2.6.10/dist/vue.js"></script>
-    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+    <script src="https://unpkg.com/axios@0.19.0/dist/axios.min.js"></script>
+    <script src="https://unpkg.com/moment@2.24.0/min/moment.min.js"></script>
 
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script
@@ -49,9 +49,16 @@
 
   <body>
     <div id="app">
-
       <div class="flex flex-wrap justify-center my-6">
-        <h1 class="w-full text-center text-4xl">vSanjo's Github Projects</h1>
+        <h1 class="w-full text-center text-4xl">
+          <a
+            class="border-b-2 border-green-500 border-dotted"
+            href="https://www.davidwoodward.me/cv.pdf"
+            title="Looking for more information? Grab my CV!"
+            >vSanjo</a
+          >'s Github Projects
+        </h1>
+        <!-- <h1 class="w-full text-center text-4xl">vSanjo's Github Projects</h1> -->
         <h2 class="w-full text-center text-2xl">
           What projects are currently being developed?
         </h2>
@@ -93,7 +100,7 @@
           class="flex border flex-wrap max-w-xs m-3 rounded"
           v-for="project in projects"
         >
-          <div style="min-height: 320px;">
+          <div style="min-height: 320px">
             <div
               class="flex flex-auto w-full py-2 px-4 border-b text-gray-800 justify-between items-center self-start"
             >
@@ -130,6 +137,12 @@
               >
                 {{ convertStatus(project.status) }}
               </span>
+            </div>
+            <div
+              class="flex flex-auto w-full py-2 px-4 border-b text-gray-800 justify-between items-center self-start"
+            >
+              Technology Stack:
+              <span class="mr-2 text-right"> {{ project.techStack }} </span>
             </div>
             <div
               class="flex flex-auto w-full py-2 px-4 border-b text-gray-800 justify-between items-center self-start"
